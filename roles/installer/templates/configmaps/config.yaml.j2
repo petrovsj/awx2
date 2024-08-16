@@ -225,7 +225,7 @@ data:
             location {{ ingress_path }} {
                 # Add trailing / if missing
                 rewrite ^(.*)$http_host(.*[^/])$ $1$http_host$2/ permanent;
-                uwsgi_read_timeout 120s;
+                uwsgi_read_timeout 125s;
                 uwsgi_pass uwsgi;
                 include /etc/nginx/uwsgi_params;
                 include /etc/nginx/conf.d/*.conf;
@@ -300,8 +300,8 @@ data:
     max-requests = 1000
     buffer-size = 32768
 
-    harakiri = 115
-    harakiri-graceful-timeout = 110
+    harakiri = 120
+    harakiri-graceful-timeout = 115
     harakiri-graceful-signal = 31
     py-call-osafterfork = true
     
