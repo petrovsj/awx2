@@ -1,5 +1,5 @@
 - name: Update and upgrade
-  hosts: all
+  hosts: 192.168.81.129
   become: yes
   tasks:
    - name: update
