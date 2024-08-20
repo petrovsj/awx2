@@ -1,0 +1,6 @@
+- name: Update and upgrade
+  hosts: all
+  become: yes
+  tasks:
+   - name: update
+     shell: mkdir /home/ubuntutarget/awx_folder
