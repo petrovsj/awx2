@@ -1,6 +1,6 @@
-- name: Update and upgrade
-  hosts: 192.168.81.129
+- name: Create folder
+  hosts: all
   become: yes
   tasks:
-   - name: update
+   - name: mkdir
      shell: mkdir /home/ubuntutarget/awx_folder
